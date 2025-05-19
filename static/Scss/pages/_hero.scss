@@ -1,0 +1,210 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+  text-transform: uppercase;
+
+  &_first {
+    p {
+      color: #62646c;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+      color: #e4e4e6;
+    }
+  }
+
+  &_second {
+    display: none;
+  }
+
+  &_end {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    div ~ h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+}
+
+@include mixins.media-largePhone {
+  .hero {
+    gap: 35px;
+
+    &_first {
+      p {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+    }
+
+    &_end {
+      div {
+        gap: 20px;
+
+        h2 {
+          font-size: 35px;
+        }
+      }
+
+      div ~ h2 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@include mixins.media-mediumTablet {
+  .hero {
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 200px;
+    padding: 0;
+    overflow: hidden;
+
+    &_first {
+      p {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+    }
+
+    &_second {
+      position: absolute;
+      display: block;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &_end {
+      div {
+        gap: 20px;
+
+        h2 {
+          font-size: 35px;
+        }
+      }
+
+      div ~ h2 {
+        font-size: 33px;
+      }
+    }
+  }
+}
+
+@include mixins.media-compactLaptop {
+  .hero {
+    height: 250px;
+
+    &_first {
+      p {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 55px;
+      }
+    }
+
+    &_end {
+      div {
+        h2 {
+          font-size: 40px;
+        }
+      }
+
+      div ~ h2 {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@include mixins.media-mediumLaptop {
+  .hero {
+    height: 260px;
+
+    &_first {
+      h1 {
+        font-size: 60px;
+      }
+    }
+
+    &_end {
+      div {
+        h2 {
+          font-size: 48px;
+        }
+      }
+
+      div ~ h2 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@include mixins.media-largeLaptop {
+  .hero {
+    height: 330px;
+
+    &_first {
+      p {
+        font-size: 22px;
+      }
+
+      h1 {
+        font-size: 80px;
+      }
+    }
+
+    &_end {
+      div {
+        h2 {
+          font-size: 58px;
+        }
+      }
+
+      div ~ h2 {
+        font-size: 58px;
+      }
+    }
+  }
+}

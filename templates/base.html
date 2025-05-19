@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        {% block 'title' %} {% endblock %}
+    </title>
+
+    <!-- Tavsif -->
+    <meta name="description"
+        content="Explore the dark-themed photography portfolio of Asadbek Odilov. Capturing moments with artistic precision – portraits, nature, events and more." />
+
+    <!-- Kalit so‘zlar -->
+    <meta name="keywords"
+        content="photography, photographer portfolio, dark theme, photo gallery, nature photos, portrait photography, event photography" />
+
+    <!-- Muallif -->
+    <meta name="author" content="Asadbek Odilov" />
+
+    <!-- Kodlash -->
+    <meta charset="UTF-8" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://i.postimg.cc/Qx1kP2W4/favicon.png" type="image/x-icon" />
+
+    <!-- Responsive dizayn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph (Facebook va boshqalar uchun) -->
+    <meta property="og:title" content="Dark Theme Photography Portfolio" />
+    <meta property="og:description"
+        content="Discover a visually striking, dark-themed photography portfolio featuring portraits, landscapes, and more." />
+    <meta property="og:image" content="https://i.postimg.cc/CLj4R3Jy/Rectangle-6330.png" />
+    <meta property="og:url" content="https://photographer-portfolio-292v.onrender.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Asadbek Odilov Photography Portfolio" />
+    <meta name="twitter:description" content="A dark-themed gallery of professional photography." />
+    <meta name="twitter:image" content="https://i.postimg.cc/CLj4R3Jy/Rectangle-6330.png" />
+    <!--  
+        Links
+    -->
+    <!-- Google Fonts (Manrope) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+
+    <!-- Style css link -->
+    <link rel="stylesheet" href="{% static 'Css/style.css'%}" />
+</head>
+
+<body>
+    <!-- Header section start -->
+    <header class="header container">
+        <a class="header_anchor" href="#">
+            <img src="{% static 'Images/Logo.svg'%}" alt="Logo">
+        </a>
+
+        <nav class="header_nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+
+        <div class="header_div" href="#">
+            <a href="#" class="btn-border">
+                <span class="btn">Contact Me</span>
+            </a>
+        </div>
+
+        <a href="#" class="header_gumburger">
+            <img src="{% static 'Images/Gumburger_btn.svg' %}" alt="Gumburger">
+        </a>
+    </header>
+    <div class="br"></div>
+    <!-- Header section end -->
+</body>
+
+</html>

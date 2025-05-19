@@ -1,0 +1,26 @@
+@use '../abstract/variables' as vrb;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: vrb.$main_bg;
+    font-family: vrb.$font-family;
+}
